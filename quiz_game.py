@@ -1,3 +1,4 @@
+from termcolor import colored
 print("Welcome to my computer quiz!")
 
 playing = input("Do you want to play? ")
@@ -18,7 +19,7 @@ else:
 
 print("")
 answer = input("What does GPU stand for? ")
-correct_answer = "graphics processing unit"
+correct_answer = "Graphics Processing Unit"
 if answer.title() == correct_answer:
     print('Correct!')
     score += 1
@@ -117,9 +118,9 @@ else:
     print("Wrong! the correct answer is " + str(correct_answer))
 
 print("")
-answer = input("Whad does MAC Address stand for? ")
-correct_answer = correct_answer
-if answer.title() == "Media Access Control Address":
+answer = input("What does MAC Address stand for? ")
+correct_answer = "Media Access Control Address"
+if answer.title() == correct_answer:
     print('Correct!')
     score += 1
 else:
@@ -189,4 +190,7 @@ else:
     print("Wrong! the correct answer is " + str(correct_answer))
 
 print("")
-print("You got " + str(score / 20 * 100) + "%")
+if score >= 10:
+    print(colored("You got " + str(score / 20 * 100) + "%", "green"))
+else:
+    print(colored("You got " + str(score / 20 * 100) + "%", "red"))
