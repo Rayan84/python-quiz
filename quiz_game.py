@@ -21,7 +21,6 @@ def result(val):
 def main():
     print("main running")
     score = 0
-    print(score)
     question = ["What does CPU stand for?", "What does GPU stand for?", "What does RAM stand for?", "What does DDR stand for?", "What does DV stnad for? ", "What does DVD stand for?", "What does DVD+R stand for? ", "What does DVD-RAM stand for? ", "What does DVI stand for? ", "What does HDD stand for? ",
                 "What does HDMI stand for? ", "What does I/O stand for? ", "What does MAC Address stand for? ", "What does PCI stand for? ", "What does PROM stand for? ", "What does SRAM stand for? ", "Whad does SSD stand for? ", "What does FSB stand for? ", "What does UPS stand for? ", "What does USB stand for? "]
     correct_answer = ["Central Processing Unit", "Graphics Processing Unit", "Random Access Memory", "Double Data Rate", "Digital Video", "Digital Versatile Disc", "Digital Versatile Disc Recordable", "Digital Versatile Disc Random Access Memory", "Digital Video Interface", "Hard Disk Drive",
@@ -32,11 +31,11 @@ def main():
         print(question[i])
         user_answer = input()
         if user_answer.title() == correct_answer[i]:
-            print("Correct!")
+            print(colored("Correct!", "green"))
             score += 1
-            print(score)
         else:
-            print("Wrong!, the correct answer is: " + str(correct_answer[i]))
+            print(colored("Wrong!, the correct answer is: " +
+                  str(correct_answer[i]), "red"))
         i += 1
     result(score)
 
