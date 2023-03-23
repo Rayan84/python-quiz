@@ -2,7 +2,7 @@ from termcolor import colored
 print("Welcome to my computer quiz!")
 
 playing = input("Do you want to play? ")
-score = 0
+
 print("")
 
 if playing.lower() != "yes":
@@ -10,188 +10,35 @@ if playing.lower() != "yes":
 print("Ok! Let's play :) ")
 
 
-answer = input("What does CPU stand for? ")
-correct_answer = "Central Processing Unit"
-if answer.title() == correct_answer:
-    print("Correct!")
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does GPU stand for? ")
-correct_answer = "Graphics Processing Unit"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does RAM stand for? ")
-correct_answer = "Random Access Memory"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
+def result(val):
+    print("")
+    if val >= 10:
+        print(colored("You got " + str(val / 20 * 100) + "%", "green"))
+    else:
+        print(colored("Success! You got " + str(val / 20 * 100) + "%", "red"))
 
 
-print("")
-answer = input("What does DDR stand for? ")
-correct_answer = "Double Data Rate"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
+def main():
+    print("main running")
+    score = 0
+    print(score)
+    question = ["What does CPU stand for?", "What does GPU stand for?", "What does RAM stand for?", "What does DDR stand for?", "What does DV stnad for? ", "What does DVD stand for?", "What does DVD+R stand for? ", "What does DVD-RAM stand for? ", "What does DVI stand for? ", "What does HDD stand for? ",
+                "What does HDMI stand for? ", "What does I/O stand for? ", "What does MAC Address stand for? ", "What does PCI stand for? ", "What does PROM stand for? ", "What does SRAM stand for? ", "Whad does SSD stand for? ", "What does FSB stand for? ", "What does UPS stand for? ", "What does USB stand for? "]
+    correct_answer = ["Central Processing Unit", "Graphics Processing Unit", "Random Access Memory", "Double Data Rate", "Digital Video", "Digital Versatile Disc", "Digital Versatile Disc Recordable", "Digital Versatile Disc Random Access Memory", "Digital Video Interface", "Hard Disk Drive",
+                      "High-Definition Multimedia Interface", "Input/Output", "Media Access Control Address", "Peripheral Component Interconnect", "Programmable Read-Only Memory", "Static Random Access Memory", "Solid State Drive", "Front Side Bus", "Uninterruptible Power System", "Universal Serial Bus"]
+    i = 0
+    while i < 20:
+        print("")
+        print(question[i])
+        user_answer = input()
+        if user_answer.title() == correct_answer[i]:
+            print("Correct!")
+            score += 1
+            print(score)
+        else:
+            print("Wrong!, the correct answer is: " + str(correct_answer[i]))
+        i += 1
+    result(score)
 
-print("")
-answer = input("What does DV stnad for? ")
-correct_answer = "Digital Video"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
 
-print("")
-answer = input("What does DVD stand for? ")
-correct_answer = "Digital Versatile Disc"
-if answer.title() == "Digital Versatile Disc":
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does DVD+R stand for? ")
-correct_answer = "Digital Versatile Disc Recordable"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does DVD-RAM stand for? ")
-correct_answer = "Digital Versatile Disc Random Access Memory"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does DVI stand for? ")
-correct_answer = "Digital Video Interface"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does HDD stand for? ")
-correct_answer = "Hard Disk Drive"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does HDMI stand for? ")
-correct_answer = "High-Definition Multimedia Interface"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does I/O stand for? ")
-correct_answer = "Input/Output"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does MAC Address stand for? ")
-correct_answer = "Media Access Control Address"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does PCI stand for? ")
-correct_answer = "Peripheral Component Interconnect"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does PROM stand for? ")
-correct_answer = "Programmable Read-Only Memory"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does SRAM stand for? ")
-correct_answer = "Static Random Access Memory"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("Whad does SSD stand for? ")
-correct_answer = "Solid State Drive"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does FSB stand for? ")
-correct_answer = "Front Side Bus"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does UPS stand for? ")
-correct_answer = "Uninterruptible Power System"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-answer = input("What does USB stand for? ")
-correct_answer = "Universal Serial Bus"
-if answer.title() == correct_answer:
-    print('Correct!')
-    score += 1
-else:
-    print("Wrong! the correct answer is " + str(correct_answer))
-
-print("")
-if score >= 10:
-    print(colored("You got " + str(score / 20 * 100) + "%", "green"))
-else:
-    print(colored("You got " + str(score / 20 * 100) + "%", "red"))
+main()
