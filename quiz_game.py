@@ -13,9 +13,9 @@ print("Ok! Let's play :) ")
 def result(val):
     print("")
     if val >= 10:
-        print(colored("You got " + str(val / 20 * 100) + "%", "green"))
+        print(colored("Success! You got " + str(val / 20 * 100) + "%", "green"))
     else:
-        print(colored("Success! You got " + str(val / 20 * 100) + "%", "red"))
+        print(colored("Fail! You got " + str(val / 20 * 100) + "%", "red"))
 
 
 def main():
