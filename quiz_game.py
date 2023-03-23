@@ -28,7 +28,6 @@ def result(val):
 
 
 def main():
-    print("main running")
     score = 0
     question = ["What does CPU stand for?", "What does GPU stand for?", "What does RAM stand for?", "What does DDR stand for?", "What does DV stnad for? ", "What does DVD stand for?", "What does DVD+R stand for? ", "What does DVD-RAM stand for? ", "What does DVI stand for? ", "What does HDD stand for? ",
                 "What does HDMI stand for? ", "What does I/O stand for? ", "What does MAC Address stand for? ", "What does PCI stand for? ", "What does PROM stand for? ", "What does SRAM stand for? ", "Whad does SSD stand for? ", "What does FSB stand for? ", "What does UPS stand for? ", "What does USB stand for? "]
